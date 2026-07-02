@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Lacerda — Machine Learning Engineer</title>
+<meta name="description" content="Machine Learning Engineer — ML & LLM agents in production. Churn models, LLM evaluation, race telemetry and large-scale data engineering.">
+<meta property="og:title" content="Daniel Lacerda — Machine Learning Engineer">
+<meta property="og:description" content="Machine Learning Engineer — ML & LLM agents in production. Churn models, LLM evaluation, race telemetry and large-scale data engineering.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daniel-lacerda.github.io">
+<meta property="og:image" content="https://daniel-lacerda.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daniel Lacerda — Machine Learning Engineer">
+<meta name="twitter:description" content="Machine Learning Engineer — ML & LLM agents in production. Churn models, LLM evaluation, race telemetry and large-scale data engineering.">
+<meta name="twitter:image" content="https://daniel-lacerda.github.io/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+  :root {
+    --ink: #1c1c1a;
+    --muted: #5c5b56;
+    --line: #e4e2dc;
+    --accent: #2a5db0;
+    --bg: #fcfcfa;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 4.5rem 1.5rem 3rem; }
+  h1 { font-size: 2rem; letter-spacing: -0.02em; }
+  .role { font-size: 1.15rem; color: var(--accent); font-weight: 600; margin-top: 0.2rem; }
+  .tagline { color: var(--muted); margin-top: 0.8rem; max-width: 58ch; }
+  .links { margin-top: 1.2rem; display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.95rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  section { margin-top: 3.2rem; }
+  h2 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 0.5rem;
+  }
+  .item { margin-top: 1.5rem; }
+  .item h3 { font-size: 1.05rem; }
+  .item h3 span { color: var(--muted); font-weight: 400; }
+  .item p { color: var(--muted); margin-top: 0.3rem; font-size: 0.97rem; }
+  .item ul { margin: 0.5rem 0 0 1.1rem; color: var(--muted); font-size: 0.97rem; }
+  .item li { margin-top: 0.25rem; }
+  .item li strong { color: var(--ink); font-weight: 600; }
+  .repo { display: block; padding: 1rem 1.1rem; margin-top: 0.9rem; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: inherit; }
+  .repo:hover { border-color: var(--accent); text-decoration: none; }
+  .repo b { color: var(--accent); font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.95rem; }
+  .repo span { display: block; color: var(--muted); font-size: 0.93rem; margin-top: 0.25rem; }
+  .stack { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .stack em {
+    font-style: normal; font-size: 0.85rem; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.7rem; background: var(--card);
+  }
+  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Daniel Lacerda</h1>
+    <div class="role">Machine Learning Engineer · Data Scientist</div>
+    <p class="tagline">ML &amp; LLM agents in production. I take machine learning systems all the way to production and keep them there — data engineering, modeling, deployment, observability, and the LLM evaluation rigor that almost nobody does.</p>
+    <div class="links">
+      <a href="https://github.com/daniel-lacerda">GitHub</a>
+      <a href="https://www.linkedin.com/in/daniel-lacerda-pereira">LinkedIn</a>
+      <a href="mailto:daniel.lacerda0801@gmail.com">daniel.lacerda0801@gmail.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>In production</h2>
+    <div class="item">
+      <h3>Zoppy <span>— retail CRM SaaS, ~2,000 stores · sole data scientist</span></h3>
+      <ul>
+        <li><strong>B2B churn model</strong> whose critical-risk alerts are 81% precise (precision@0.9) — cancellation reversals rose from ~5–10 to 20+/month, and SHAP churn drivers redirected the product roadmap.</li>
+        <li><strong>AI campaign creation</strong>: a deterministic pipeline of specialized LLMs shipping ~300 campaigns/month that convert at 8% vs. 5% for manual ones, at ~$0.10 each.</li>
+        <li><strong>Proactive Customer Success agent</strong> validated by a 1-month shadow deployment before it ever spoke to a customer.</li>
+        <li><strong>WhatsApp RAG chatbot</strong> containing 70% of initial support volume without escalating to humans.</li>
+        <li>Underneath: an S3/Athena/Glue/<strong>Apache Iceberg lakehouse</strong> and <strong>Langfuse eval suites</strong> — behavioral eval datasets, cross-family LLM-as-judge, eval gating on every prompt change.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>TMG Racing <span>— Stock Car Pro Series · race data engineer for Felipe Massa's car</span></h3>
+      <ul>
+        <li>Built <a href="https://tmgracing.app">tmgracing.app</a>, the platform all 10 team engineers use trackside (~80 AWS resources, IaC, CI/CD).</li>
+        <li><strong>Lap-time prediction service</strong> (XGBoost) with 62% error reduction vs. baseline (MAPE 0.8% → 0.3%), validated strictly out-of-time.</li>
+        <li><strong>Telemetry ↔ timing reconciliation</strong> with no shared key, via Needleman–Wunsch global sequence alignment with empirically calibrated confidence tiers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Public projects</h2>
+    <a class="repo" href="https://github.com/daniel-lacerda/llm-agent-failure-modes">
+      <b>llm-agent-failure-modes</b>
+      <span>Empirical characterization of LLM agent failure modes translating documented specifications into real corporate data — UFMG postgraduate capstone.</span>
+    </a>
+    <a class="repo" href="https://github.com/daniel-lacerda/network-security-ml">
+      <b>network-security-ml</b>
+      <span>ML for network threat detection: unsupervised intrusion detection on 2.8M CICIDS2017 flows (precision 0.79 at 2.6% FPR), phishing classification at 0.97 F1, and forensics over 105.7M flow records.</span>
+    </a>
+    <a class="repo" href="https://github.com/daniel-lacerda/cnpj-open-data-spark">
+      <b>cnpj-open-data-spark</b>
+      <span>PySpark ETL over Brazil's full CNPJ open registry: 71.7M establishment records consolidated from 140M+ raw rows (~21 GB); Parquet 7.2× smaller and up to 27.7× faster than CSV; K-Means geography of the education sector.</span>
+    </a>
+    <a class="repo" href="https://github.com/daniel-lacerda/intel-scene-classification-pytorch">
+      <b>intel-scene-classification-pytorch</b>
+      <span>MLP → from-scratch CNN → fine-tuned ResNet18 on 6-class scene classification: 45.7% → 85.4% → 92.6% test accuracy.</span>
+    </a>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <div class="stack">
+      <em>Python</em><em>SQL</em><em>PySpark</em><em>scikit-learn</em><em>XGBoost</em><em>PyTorch</em>
+      <em>LangChain</em><em>Langfuse</em><em>FastAPI</em><em>Docker</em>
+      <em>AWS (Glue, Athena, Step Functions, CDK)</em><em>Apache Iceberg</em><em>OpenTelemetry</em>
+    </div>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <div class="item">
+      <p>Postgraduate specialization in Data Science at UFMG (2024–2026, grade 94/100), with a capstone on LLM agent failure modes — defense in July 2026. BSc in Mechanical Engineering at UFMG. Before data: vehicle dynamics simulation at Stellantis and telemetry analysis on the 2023 Porsche Cup Brasil championship-winning campaign — the domain foundation behind the sensors I now turn into features.</p>
+    </div>
+  </section>
+
+  <footer>
+    Belo Horizonte, Brazil · <a href="https://github.com/daniel-lacerda">github.com/daniel-lacerda</a>
+  </footer>
+</main>
+</body>
+</html>
